@@ -20,6 +20,9 @@
 --DarkGrayishViolet: hsl(270, 7%, 64%);
 
 /* my var */
+
+--MessengerWidth: 230px;
+
 --BackgroundColor: hsl(0, 0%, 98%);
 
 --LeftBackgroundWidth: 550px;
@@ -90,8 +93,7 @@ body{
 }
 
 .messenger{
-    width: 230px;
-    min-height: 500px;
+    width: var(--MessengerWidth);
 
     position: absolute;
     top: 110px;
@@ -105,21 +107,101 @@ body{
 .msg_header{
     background: linear-gradient(90deg, rgba(139,59,255,1) 0%, rgba(255,68,254,1) 100%);
     width: 100%;
-    height: 60px;
+    height: 66px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .msg_header_white_box{
-    position: absolute;
     width:56%;
-    left: 22%;
     height: 19px;
     background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
 }
+
+.msg_header_person{
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.msg_header_person_arrow{
+    color: white;
+    font-weight: 500;
+}
+
+.msg_header_person_face{
+    margin-left: 6px;
+    margin-right: 8px;
+    width: 24px;
+    border-radius: 50%;
+    border: white solid 1px;
+}
+
+.msg_header_person_name{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.msg_header_person_name2{
+    color: white;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.msg_header_person_status{
+    color: white;
+    font-weight: 400;
+    font-size: 5px;
+    letter-spacing: 0.3em;
+}
+
+.msg_header_person_menu{
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 0xp;
+    position: relative;
+}
+
+
+
+.msg_header_person_menu::before{
+    content: '';
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+}
+    
+
+.msg_header_person_menu::after{
+    content: '';
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+}
+
+
+
 
 .msg_left{
     max-width: 60%;
@@ -199,7 +281,11 @@ body{
     border-radius: calc(var(--NewMsgHeight)/2);
     display: flex;
     align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 14px;
 }
+
 
 .new_msg  input[type="text"]{
     background-color: white;
@@ -212,7 +298,6 @@ body{
 }
 
 .new_msg form{
-    width:auto;
     display: flex;
     justify-content: space-between;
 }
@@ -235,4 +320,24 @@ body{
     border: none;
     font-weight: 700;
     margin-right: 4px;
+}
+
+.info{
+    position: absolute;
+    width: 450px;
+    top: 250px;
+    left: 700px;
+}
+
+.info_title{
+    color: var(--VeryDarkDesaturatedViolet);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 28px;
+}
+
+.info_text{
+    color: var(--DesaturatedDarkViolet);
+    line-height: 30px;
 }
