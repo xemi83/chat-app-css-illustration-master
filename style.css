@@ -120,14 +120,18 @@ body{
     align-items: stretch;
 }
 
+/*
 .msg_header_white_box_positioning{
     display: flex;
     justify-content: center;
 }
+*/
 
 .msg_header_white_box{
     width:56%;
-    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 16px;
     background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
